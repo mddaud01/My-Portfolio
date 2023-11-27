@@ -58,7 +58,7 @@ const Landing = ({ setSelectedPage }) => {
           </p>
 
           <p className="mt-10 mb-7 text-sm text-center md:text-start font-bold">
-           I am mechenical Front -end Engineeer with One years of experience in Reactjs Developer
+           I am mechenical Front-end Engineeer with One years of experience in Reactjs 
           </p>
         </motion.div>
 

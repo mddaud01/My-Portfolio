@@ -15,18 +15,17 @@ const projectVariant = {
   visible: { opacity: 1, scale: 1 },
 };
 
-const Project = ({ title }) => {
+const Project = ({ title ,Details,subTitle}) => {
   const overlayStyles = `absolute h-full w-full opacity-0 hover:opacity-90 transition duration-500
-    bg-grey z-30 flex flex-col justify-center items-center text-center p-16 text-deep-blue`;
+    bg-grey z-30 flex flex-col justify-center items-center text-center p-16 text-deep-blue gap-2`;
   const projectTitle = title.split(" ").join("-").toLowerCase();
 
   return (
     <motion.div variants={projectVariant} className="relative">
       <div className={overlayStyles}>
-        <p className="text-2xl font-playfair">{title}</p>
+        <p className="text-2xl font-playfair">{subTitle}</p>
         <p className="mt-7">
-          Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Nulla
-          porttitor accumsan tincidunt.
+       {Details}
         </p>
       </div>
       <img src={`../assets/${projectTitle}.jpeg`} alt={projectTitle} />
@@ -36,7 +35,7 @@ const Project = ({ title }) => {
 
 const Projects = () => {
   return (
-    <section id="projects" className="pt-48 pb-48">
+    <section id="projects" className="pt-4 pb-4">
       {/* HEADINGS */}
       <motion.div
         className="md:w-2/5 mx-auto text-center"
@@ -58,9 +57,7 @@ const Projects = () => {
           </div>
         </div>
         <p className="mt-10 mb-10">
-          Aliquam, amet dui feugiat facilisi dui. Aliquam aliquet integer ut
-          fames odio in at. At magna ornare dictum lectus. Purus massa morbi
-          purus nec eget eleifend ut elit.
+        Developed diverse projects showcasing proficiency in React and TypeScript. Created a dynamic movie website app for seamless entertainment exploration. Engineered a robust CRUD application for efficient data management. Crafted an engaging gym fitness app to promote health and wellness. Implemented a user-friendly E-commerce website with CRUD functionalities for seamless online shopping. Additionally, designed a sleek food recipe platform, blending creativity with functionality using React and TypeScript for an optimal user experience across applications.
         </p>
       </motion.div>
 
@@ -80,17 +77,17 @@ const Projects = () => {
           >
             BEAUTIFUL USER INTERFACES
           </div>
-          <Project title="Project 1" />
-          <Project title="Project 2" />
+          <Project title="Project 1" Details ='Elevate your fitness routine with EVOGYM Evolutionary fitness, your all-in-one gym companion. Personalized workouts, progress tracking, nutrition guidance, and a supportive community — all in the palm of your hand. Download now and unleash the power of personalized fitness!'  subTitle ='EVOGYM FITNESS'/>
+          <Project title="Project 2"subTitle='' Details='' />
 
           {/* ROW 2 */}
-          <Project title="Project 3" />
-          <Project title="Project 4" />
-          <Project title="Project 5" />
-
+          <Project title="Project 3"  subTitle='' Details=''/>
+          <Project title="Project 4" subTitle='' Details='' />
+          <Project title="Project 5"  subTitle='' Details=''/>
+           
           {/* ROW 3 */}
-          <Project title="Project 6" />
-          <Project title="Project 7" />
+          <Project title="Project 6" subTitle='' Details='' />
+          <Project title="Project 7" subTitle='' Details='' />
           <div
             className="flex justify-center text-center items-center p-10 bg-blue
               max-w-[400px] max-h-[400px] text-2xl font-playfair font-semibold"

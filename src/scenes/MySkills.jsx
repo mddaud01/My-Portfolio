@@ -1,14 +1,16 @@
+import AnchorLink from "react-anchor-link-smooth-scroll";
 import LineGradient from "../components/LineGradient";
 import useMediaQuery from "../hooks/useMediaQuery";
-import SkillImage from '../assets/SkillsImage.avif'
+import resume from '../assets/resume.pdf'
 import { motion } from "framer-motion";
+
 
 const MySkills = () => {
   const isAboveLarge = useMediaQuery("(min-width: 1060px)");
   return (
     <section id="skills" className="pt-10 pb-24">
       {/* HEADER AND IMAGE SECTION */}
-      <div className="md:flex md:justify-between md:gap-16 mt-32">
+      <div className="md:flex md:justify-between md:gap-16 mt-4">
         <motion.div
           className="md:w-1/3"
           initial="hidden"
@@ -24,16 +26,16 @@ const MySkills = () => {
             MY <span className="text-red">SKILLS</span>
           </p>
           <LineGradient width="w-1/3" />
-          <p className="mt-10 mb-7">
-            <ul>
-              <li className="text-yellow">HtMl</li>
-              <li  className="text-green-500">CSS</li>
-              <li className="text-blue">JavaScript</li>
-              <li>ReactJs</li>
-              <li className="font-extrabold text-red">React-With-TypeScript</li>
-              <li>Redux-toolkit</li>
-            </ul>
-          </p>
+          <p className=" text-green-500">HTML 5</p>
+          <p className=" text-red">CSS 3 ,<span>Bootstrap</span> <span>Tailwind</span></p>
+          <p className=" text-yellow">JAVASCRIPT</p>
+          <p className=" text-violet-500">REACT JS ,  <span>Redux-Toolkit </span></p>
+          <p className=" text-yellow">REACT_WITH_TYPESCRIPT</p>
+          <a href={resume} download ='Daud_resume.pdf' >
+         <button className=" bg-green-500 p-2 rounded-md m-2">
+            Download Resume
+          </button>
+          </a>
         </motion.div>
 
         <div className="mt-16 md:mt-0">
@@ -44,12 +46,12 @@ const MySkills = () => {
             >
               <img
                 alt="skills"
-                className="z-10  rounded-md"
-                src={SkillImage}
+                className="z-10 h-60 w-[600px] bg-cover"
+                src="assets/Skillsimage.avif"
               />
             </div>
           ) : (
-            <img alt="skills" className="z-10" src={SkillImage} />
+            <img alt="skills" className="z-10" src="assets/skills-image.png" />
           )}
         </div>
       </div>
@@ -58,7 +60,7 @@ const MySkills = () => {
       <div className="md:flex md:justify-between mt-16 gap-32">
         {/* EXPERIENCE */}
         <motion.div
-          className="md:w-1/3 mt-10"
+          className="md:w-1/3 "
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, amount: 0.5 }}
@@ -78,15 +80,16 @@ const MySkills = () => {
             <div className="w-1/2 md:w-3/4 h-32 bg-blue absolute right-0 top-0 z-[-1]" />
           </div>
           <p className="mt-5">
-            A auctor pharetra hendrerit mattis amet etiam interdum platea. Est
-            morbi porttitor scelerisque fermentum, sagittis non egestas. Amet
-            odio sit sagittis,
+            Front-End Engineer at Abaris Softech Pvt Ltd for one year,
+            specializing in React.js. Collaborated cross-functionally,
+            optimizing code for performance gains and ensuring on-time project
+            delivery
           </p>
         </motion.div>
 
         {/* INNOVATIVE */}
         <motion.div
-          className="md:w-1/3 mt-10"
+          className="md:w-1/3"
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, amount: 0.5 }}
@@ -106,15 +109,14 @@ const MySkills = () => {
             <div className="w-1/2 md:w-3/4 h-32 bg-red absolute right-0 top-0 z-[-1]" />
           </div>
           <p className="mt-5">
-            Urna, eget pulvinar dolor cursus volutpat dictum odio. Nec ultricies
-            amet in in neque nibh tortor. Libero sed pretium justo nulla blandit
-            nulla amet habitant iaculis. Iaculis in congue vitae sollicitudin
-            faucibus a
+            Always on the lookout for fresh ideas, I played a role in making our
+            work not just efficient but also more imaginative, creating an
+            environment where new possibilities were explored and embraced
           </p>
         </motion.div>
         {/* IMAGINATIVE */}
         <motion.div
-          className="md:w-1/3 mt-10"
+          className="md:w-1/3 "
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, amount: 0.5 }}
@@ -134,10 +136,9 @@ const MySkills = () => {
             <div className="w-1/2 md:w-3/4 h-32 bg-yellow absolute right-0 top-0 z-[-1]" />
           </div>
           <p className="mt-5">
-            Accumsan eu fringilla nisi, eget. Vitae, eget ut id proin arcu in
-            curabitur. Lectus libero, egestas enim aliquam quis felis amet.
-            Sagittis, amet netus fringilla netus lobortis odio sed platea.
-            Bibendum.
+            Sparked originality in projects with imaginative solutions like
+            REACTJS , elevating efficiency by 100 %. Cultivated a culture of
+            curiosity, propelling continuous growth.
           </p>
         </motion.div>
       </div>

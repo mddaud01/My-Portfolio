@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 
 const Testimonials = () => {
   return (
-    <section id="testimonials" className="pt-32 pb-16">
+    <section id="testimonials" className="pt-4 pb-4">
       {/* HEADING */}
       <motion.div
         className="md:w-1/3 text-center md:text-left"
@@ -21,8 +21,8 @@ const Testimonials = () => {
         </p>
         <LineGradient width="mx-auto w-2/5" />
         <p className="mt-10">
-          Here's What People are Saying About My Work. Aliquam aliquet integer
-          ut fames odio in at. At magna ornare dictum lectus.
+          Here's What People are Saying About My Work. 
+          <br />Shahista Naaz , Gulista Parveen , Shamsher Alam 
         </p>
       </motion.div>
 
@@ -42,7 +42,7 @@ const Testimonials = () => {
         >
           <p className="font-playfair text-6xl">“</p>
           <p className="text-center text-xl">
-            A auctor pharetra hendrerit mattis amet etiam interdum platea.
+          "Your dedication and hard work truly shine through, It's a pleasure to work alongside someone as talented and committed as you."
           </p>
         </motion.div>
 
@@ -60,8 +60,7 @@ const Testimonials = () => {
         >
           <p className="font-playfair text-6xl">“</p>
           <p className="text-center text-xl">
-            Aliquam aliquet integer ut fames odio in at. At magna ornare dictum
-            lectus.
+          "Your unique perspective and innovative approach consistently elevate our team's performance.
           </p>
         </motion.div>
 
@@ -79,7 +78,7 @@ const Testimonials = () => {
         >
           <p className="font-playfair text-6xl">“</p>
           <p className="text-center text-xl">
-            Fames odio in at. At magna ornare dictum lectus.
+          It's a privilege to collaborate with someone as creative and forward-thinking as you."
           </p>
         </motion.div>
       </div>
