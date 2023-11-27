@@ -2,6 +2,7 @@ import AnchorLink from "react-anchor-link-smooth-scroll";
 import LineGradient from "../components/LineGradient";
 import useMediaQuery from "../hooks/useMediaQuery";
 import resume from '../assets/resume.pdf'
+import skilimg from '../assets/SkillsImage.avif'
 import { motion } from "framer-motion";
 
 
@@ -47,11 +48,11 @@ const MySkills = () => {
               <img
                 alt="skills"
                 className="z-10 h-60 w-[600px] bg-cover"
-                src="assets/Skillsimage.avif"
+                src={skilimg}
               />
             </div>
           ) : (
-            <img alt="skills" className="z-10" src="assets/skills-image.png" />
+            <img alt="skills" className="z-10" src={skilimg} />
           )}
         </div>
       </div>
