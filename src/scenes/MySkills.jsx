@@ -30,7 +30,7 @@ const MySkills = () => {
           <p className=" text-green-500">HTML 5</p>
           <p className=" text-red">CSS 3 ,<span>Bootstrap</span> <span>Tailwind</span></p>
           <p className=" text-yellow">JAVASCRIPT</p>
-          <p className=" text-violet-500">REACT JS ,  <span>Redux-Toolkit </span></p>
+          <p className=" text-violet-500">REACT JS ,  <span> Redux-Toolkit </span> <span>Jest</span></p>
           <p className=" text-yellow">REACT_WITH_TYPESCRIPT</p>
           <a href={resume} download ='Daud_resume.pdf' >
          <button className=" bg-green-500 p-2 rounded-md m-2">
