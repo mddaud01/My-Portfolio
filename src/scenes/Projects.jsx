@@ -94,12 +94,10 @@ const Projects = () => {
           >
             BEAUTIFUL USER INTERFACES
           </div>
+         
           <div>
-            <Project title="Project 7" projectName="" Details="" />
-          </div>
-          <div className=" max-w-[400px] max-h-[400px] ">
             <Project
-              title="Project 1"
+              title="Project 7"
               subTitle="Project Management Tool"
               Details=" PMO is a project management tool here you can manage all projects you can create project assign projects to your employees and also you can manage your employees like how many the employee you have and working status and who has a project or not who is Unscheduled Fully-Scheduled Partially-Scheduled Over-Scheduled PMO keeps all records and you can check project health status also."
             />
@@ -135,15 +133,6 @@ const Projects = () => {
               subTitle="Seahawk Media"
               Details=" This website is for client who wants to make website for his business purpose they provide wordPress services mostly."
             />
-          </div>
-          <div>
-            <Project title="Project 7" subTitle="" Details="" />
-          </div>
-          <div
-            className="flex justify-center text-center items-center p-10 bg-blue
-              max-w-[400px] max-h-[400px] text-2xl font-playfair font-semibold"
-          >
-            SMOOTH USER EXPERIENCE
           </div>
         </motion.div>
       </div>
