@@ -1,6 +1,5 @@
 import LineGradient from "../components/LineGradient";
 import { motion } from "framer-motion";
-import gymappimage from '../assets/gymapp.png'
 
 const container = {
   hidden: {},
@@ -36,11 +35,8 @@ const Project = ({ title, Details, subTitle, gml }) => {
       <div className={overlayStyles}>
         <p className="text-2xl font-playfair">{subTitle}</p>
         <p className="mt-7">{Details}</p>
-        <button className="border border-black p-2 bg-green-400 rounded-md">
-          {gml}
-        </button>
       </div>
-      
+
       <img src={` ../assets/${projectTitle}.jpeg`} alt={projectTitle} />
     </motion.div>
   );
@@ -83,7 +79,7 @@ const Projects = () => {
       </motion.div>
 
       {/* PROJECTS */}
-      <div className="flex justify-center">
+      <div className="flex justify-center gap-2 ">
         <motion.div
           className="sm:grid sm:grid-cols-3"
           variants={container}
@@ -98,38 +94,51 @@ const Projects = () => {
           >
             BEAUTIFUL USER INTERFACES
           </div>
+          <div>
+            <Project title="Project 7" projectName="" Details="" />
+          </div>
           <div className=" max-w-[400px] max-h-[400px] ">
             <Project
               title="Project 1"
-              Details="Elevate your fitness routine with EVOGYM Evolutionary fitness, your all-in-one gym companion. Personalized workouts, progress tracking, nutrition guidance, and a supportive community — all in the palm of your hand. Download now and unleash the power of personalized fitness!"
-              subTitle="EVOGYM FITNESS"
-              gml={gymLink}
-              imgapp ={gymappimage}
+              subTitle="Project Management Tool"
+              Details=" PMO is a project management tool here you can manage all projects you can create project assign projects to your employees and also you can manage your employees like how many the employee you have and working status and who has a project or not who is Unscheduled Fully-Scheduled Partially-Scheduled Over-Scheduled PMO keeps all records and you can check project health status also."
             />
           </div>
-          <div className=" max-w-[400px] max-h-[400px] ">
-          <Project title="Project 2" subTitle="" Details="" />
-          </div>
           {/* ROW 2 */}
-          <div className=" max-w-[400px] max-h-[400px] ">
-          <Project title="Project 3" subTitle="" Details="" />
+
+          <div>
+            <Project
+              title="Project 3"
+              subTitle="Wellness Today"
+              Details="Wellness Today project is a health-related project that advice to wellness on how can be fit, they teach about exercise yoga with high expertise."
+            />
           </div>
-          <div className=" max-w-[400px] max-h-[400px] ">
-          <Project title="Project 4" subTitle="" Details="" />
+          <div>
+            <Project
+              title="Project 4"
+              subTitle="Noon"
+              Details="Noon project is an E-commerce project that runs a business in Saudi Arabia, inside the Noon there are multiple business projects like Flash, Heartbeat, Magic"
+            />
           </div>
-          <div className=" max-w-[400px] max-h-[400px] ">
-          <Project title="Project 5" subTitle="" Details="" />
+          <div>
+            <Project
+              title="Project 5"
+              subTitle="MyAssignmentServices"
+              Details="This project is developed for learning purposes like student can visit website and learn about his subject also they provide guidence or expert for suggetion."
+            />
           </div>
 
           {/* ROW 3 */}
-          <div className=" max-w-[400px] max-h-[400px] ">
-          <Project title="Project 6" subTitle="" Details="" />
+          <div>
+            <Project
+              title="Project 6"
+              subTitle="Seahawk Media"
+              Details=" This website is for client who wants to make website for his business purpose they provide wordPress services mostly."
+            />
           </div>
-          <div className=" max-w-[400px] max-h-[400px] ">
-          <Project title="Project 7" subTitle="" Details="" />
+          <div>
+            <Project title="Project 7" subTitle="" Details="" />
           </div>
-          
-         
           <div
             className="flex justify-center text-center items-center p-10 bg-blue
               max-w-[400px] max-h-[400px] text-2xl font-playfair font-semibold"
