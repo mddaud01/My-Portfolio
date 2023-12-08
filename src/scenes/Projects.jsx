@@ -1,5 +1,6 @@
 import LineGradient from "../components/LineGradient";
 import { motion } from "framer-motion";
+import gymappimage from '../assets/gymapp.png'
 
 const container = {
   hidden: {},
@@ -14,8 +15,18 @@ const projectVariant = {
   hidden: { opacity: 0, scale: 0.8 },
   visible: { opacity: 1, scale: 1 },
 };
+const gymLink = (
+  <a
+    href="https://www.instagram.com/mddaud01/"
+    target="_blank"
+    rel="noreferrer"
+  >
+    {" "}
+    visit app
+  </a>
+);
 
-const Project = ({ title ,Details,subTitle}) => {
+const Project = ({ title, Details, subTitle, gml }) => {
   const overlayStyles = `absolute h-full w-full opacity-0 hover:opacity-90 transition duration-500
     bg-grey z-30 flex flex-col justify-center items-center text-center p-16 text-deep-blue gap-2`;
   const projectTitle = title.split(" ").join("-").toLowerCase();
@@ -24,11 +35,13 @@ const Project = ({ title ,Details,subTitle}) => {
     <motion.div variants={projectVariant} className="relative">
       <div className={overlayStyles}>
         <p className="text-2xl font-playfair">{subTitle}</p>
-        <p className="mt-7">
-       {Details}
-        </p>
+        <p className="mt-7">{Details}</p>
+        <button className="border border-black p-2 bg-green-400 rounded-md">
+          {gml}
+        </button>
       </div>
-      <img src={`../assets/${projectTitle}.jpeg`} alt={projectTitle} />
+      
+      <img src={` ../assets/${projectTitle}.jpeg`} alt={projectTitle} />
     </motion.div>
   );
 };
@@ -57,7 +70,15 @@ const Projects = () => {
           </div>
         </div>
         <p className="mt-10 mb-10">
-        Developed diverse projects showcasing proficiency in React and TypeScript. Created a dynamic movie website app for seamless entertainment exploration. Engineered a robust CRUD application for efficient data management. Crafted an engaging gym fitness app to promote health and wellness. Implemented a user-friendly E-commerce website with CRUD functionalities for seamless online shopping. Additionally, designed a sleek food recipe platform, blending creativity with functionality using React and TypeScript for an optimal user experience across applications.
+          Developed diverse projects showcasing proficiency in React and
+          TypeScript. Created a dynamic movie website app for seamless
+          entertainment exploration. Engineered a robust CRUD application for
+          efficient data management. Crafted an engaging gym fitness app to
+          promote health and wellness. Implemented a user-friendly E-commerce
+          website with CRUD functionalities for seamless online shopping.
+          Additionally, designed a sleek food recipe platform, blending
+          creativity with functionality using React and TypeScript for an
+          optimal user experience across applications.
         </p>
       </motion.div>
 
@@ -77,17 +98,38 @@ const Projects = () => {
           >
             BEAUTIFUL USER INTERFACES
           </div>
-          <Project title="Project 1" Details ='Elevate your fitness routine with EVOGYM Evolutionary fitness, your all-in-one gym companion. Personalized workouts, progress tracking, nutrition guidance, and a supportive community — all in the palm of your hand. Download now and unleash the power of personalized fitness!'  subTitle ='EVOGYM FITNESS'/>
-          <Project title="Project 2"subTitle='' Details='' />
-
+          <div className=" max-w-[400px] max-h-[400px] ">
+            <Project
+              title="Project 1"
+              Details="Elevate your fitness routine with EVOGYM Evolutionary fitness, your all-in-one gym companion. Personalized workouts, progress tracking, nutrition guidance, and a supportive community — all in the palm of your hand. Download now and unleash the power of personalized fitness!"
+              subTitle="EVOGYM FITNESS"
+              gml={gymLink}
+              imgapp ={gymappimage}
+            />
+          </div>
+          <div className=" max-w-[400px] max-h-[400px] ">
+          <Project title="Project 2" subTitle="" Details="" />
+          </div>
           {/* ROW 2 */}
-          <Project title="Project 3"  subTitle='' Details=''/>
-          <Project title="Project 4" subTitle='' Details='' />
-          <Project title="Project 5"  subTitle='' Details=''/>
-           
+          <div className=" max-w-[400px] max-h-[400px] ">
+          <Project title="Project 3" subTitle="" Details="" />
+          </div>
+          <div className=" max-w-[400px] max-h-[400px] ">
+          <Project title="Project 4" subTitle="" Details="" />
+          </div>
+          <div className=" max-w-[400px] max-h-[400px] ">
+          <Project title="Project 5" subTitle="" Details="" />
+          </div>
+
           {/* ROW 3 */}
-          <Project title="Project 6" subTitle='' Details='' />
-          <Project title="Project 7" subTitle='' Details='' />
+          <div className=" max-w-[400px] max-h-[400px] ">
+          <Project title="Project 6" subTitle="" Details="" />
+          </div>
+          <div className=" max-w-[400px] max-h-[400px] ">
+          <Project title="Project 7" subTitle="" Details="" />
+          </div>
+          
+         
           <div
             className="flex justify-center text-center items-center p-10 bg-blue
               max-w-[400px] max-h-[400px] text-2xl font-playfair font-semibold"
