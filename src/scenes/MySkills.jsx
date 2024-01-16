@@ -28,12 +28,12 @@ const MySkills = () => {
           </p>
           <LineGradient width="w-1/3" />
           <p className=" text-green-500">HTML 5</p>
-          <p className=" text-red">CSS 3 ,<span>Bootstrap</span> <span>Tailwind</span></p>
+          <p className=" text-red">CSS 3 ,<span>Bootstrap,</span> <span>Tailwind ,</span> <span>ShadCn</span></p>
           <p className=" text-yellow">JAVASCRIPT</p>
-          <p className=" text-violet-500">REACT JS ,  <span> Redux-Toolkit </span> <span>Jest</span></p>
-          <p className=" text-yellow">REACT_WITH_TYPESCRIPT</p>
+          <p className=" text-violet-500">REACT JS ,  <span> Redux-Toolkit ,</span> <span>Jest</span></p>
+          <p className=" text-yellow">TypeScript</p>
           <a href={resume} download ='Daud_resume.pdf' >
-         <button className=" bg-green-500 p-2 rounded-md m-2">
+         <button className=" bg-green-500 p-2 rounded-md m-2 hover:bg-green-300 active:bg-green-800">
             Download Resume
           </button>
           </a>
