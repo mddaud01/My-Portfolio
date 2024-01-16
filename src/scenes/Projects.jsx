@@ -1,5 +1,8 @@
 import LineGradient from "../components/LineGradient";
 import { motion } from "framer-motion";
+import project1 from '../assets/project-1.png';
+import project2 from '../assets/project-2.png'
+import project3 from '../assets/project-3.png'
 
 const container = {
   hidden: {},
@@ -14,30 +17,22 @@ const projectVariant = {
   hidden: { opacity: 0, scale: 0.8 },
   visible: { opacity: 1, scale: 1 },
 };
-const gymLink = (
-  <a
-    href="https://www.instagram.com/mddaud01/"
-    target="_blank"
-    rel="noreferrer"
-  >
-    {" "}
-    visit app
-  </a>
-);
 
-const Project = ({ title, Details, subTitle, gml }) => {
+
+const Project = ({ title, Details, subTitle, visitLink }) => {
   const overlayStyles = `absolute h-full w-full opacity-0 hover:opacity-90 transition duration-500
-    bg-grey z-30 flex flex-col justify-center items-center text-center p-16 text-deep-blue gap-2`;
-  const projectTitle = title.split(" ").join("-").toLowerCase();
+    bg-grey z-30 flex flex-col justify-center items-center text-center p-16 text-deep-blue gap-4`;
+  
 
   return (
-    <motion.div variants={projectVariant} className="relative">
+    <motion.div variants={projectVariant} className="relative  ">
       <div className={overlayStyles}>
         <p className="text-2xl font-playfair">{subTitle}</p>
         <p className="mt-7">{Details}</p>
+        <button className="border bg-green-500 text-white px-4 py-2 rounded hover:bg-green-800 active:bg-green-300"><a href={visitLink}>Visit App</a></button>
       </div>
 
-      <img src={` ../assets/${projectTitle}.jpeg`} alt={projectTitle} />
+      <img src={title} alt={title} className="w-[500px] h-[400px] bg-cover m-2" />
     </motion.div>
   );
 };
@@ -67,14 +62,8 @@ const Projects = () => {
         </div>
         <p className="mt-10 mb-10">
           Developed diverse projects showcasing proficiency in React and
-          TypeScript. Created a dynamic movie website app for seamless
-          entertainment exploration. Engineered a robust CRUD application for
-          efficient data management. Crafted an engaging gym fitness app to
-          promote health and wellness. Implemented a user-friendly E-commerce
-          website with CRUD functionalities for seamless online shopping.
-          Additionally, designed a sleek food recipe platform, blending
-          creativity with functionality using React and TypeScript for an
-          optimal user experience across applications.
+          TypeScript. Created a dynamic calendar task app for seamless work .
+          Crafted an engaging gym fitness app to promote health and wellness.
         </p>
       </motion.div>
 
@@ -90,49 +79,44 @@ const Projects = () => {
           {/* ROW 1 */}
           <div
             className="flex justify-center text-center items-center p-10 bg-red
-              max-w-[400px] max-h-[400px] text-2xl font-playfair font-semibold"
+              max-w-[500px] max-h-[400px] text-2xl font-playfair font-semibold m-2"
           >
             BEAUTIFUL USER INTERFACES
           </div>
-         
+
           <div>
             <Project
-              title="Project 7"
-              subTitle="Project Management Tool"
-              Details=" PMO is a project management tool here you can manage all projects you can create project assign projects to your employees and also you can manage your employees like how many the employee you have and working status and who has a project or not who is Unscheduled Fully-Scheduled Partially-Scheduled Over-Scheduled PMO keeps all records and you can check project health status also."
+              title={project1}
+              subTitle="Calendar Task"
+              Details="  This is a Calendar Task Where you can assign the Task  "
+              visitLink='https://event-calendar-nine.vercel.app/'
             />
           </div>
           {/* ROW 2 */}
 
           <div>
             <Project
-              title="Project 3"
-              subTitle="Wellness Today"
-              Details="Wellness Today project is a health-related project that advice to wellness on how can be fit, they teach about exercise yoga with high expertise."
+                title={project2}
+              subTitle="Product Dashboard"
+              Details=" This is Product Dashboard Here you can get All product export and import also you can get seller Details as well as product details"
+              visitLink='https://analytic-dashboard-beige.vercel.app/'
             />
           </div>
           <div>
             <Project
-              title="Project 4"
-              subTitle="Noon"
-              Details="Noon project is an E-commerce project that runs a business in Saudi Arabia, inside the Noon there are multiple business projects like Flash, Heartbeat, Magic"
+                title={project3}
+              subTitle="Evogym Fitness App"
+              Details="This is a fitness freek gym app here you can get all fitness related Data and structured plan for body buildings and yoga classes  "
+              visitLink='https://gym-fitness-app-mddaud01s-projects.vercel.app/'
             />
           </div>
           <div>
-            <Project
-              title="Project 5"
-              subTitle="MyAssignmentServices"
-              Details="This project is developed for learning purposes like student can visit website and learn about his subject also they provide guidence or expert for suggetion."
-            />
+          
           </div>
 
           {/* ROW 3 */}
           <div>
-            <Project
-              title="Project 6"
-              subTitle="Seahawk Media"
-              Details=" This website is for client who wants to make website for his business purpose they provide wordPress services mostly."
-            />
+          
           </div>
         </motion.div>
       </div>

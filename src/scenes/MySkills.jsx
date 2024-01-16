@@ -43,16 +43,16 @@ const MySkills = () => {
           {isAboveLarge ? (
             <div
               className="relative z-0 ml-20 before:absolute before:-top-10 before:-left-10
-              before:w-full before:h-full before:border-2 before:border-blue before:z-[-1]"
+              before:w-full before:h-full before:border-2 before:border-blue before:z-[-1] border-red border-2"
             >
               <img
                 alt="skills"
-                className="z-10 h-60 w-[600px] bg-cover"
+                className="z-10 h-60 w-[600px] bg-cover "
                 src={skilimg}
               />
             </div>
           ) : (
-            <img alt="skills" className="z-10" src={skilimg} />
+            <img alt="skills" className="z-10 " src={skilimg} />
           )}
         </div>
       </div>
