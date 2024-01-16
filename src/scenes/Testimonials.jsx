@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 
 const Testimonials = () => {
   return (
-    <section id="testimonials" className="pt-4 pb-4">
+    <section id="testimonials" className="mt-4">
       {/* HEADING */}
       <motion.div
         className="md:w-1/3 text-center md:text-left"
